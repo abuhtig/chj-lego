@@ -10,3 +10,8 @@ a{
   color: var(--font-color);
   text-decoration: none;
 }
+
+a:hover {
+  text-decoration: none;
+  color: #1da4d1;
+}
