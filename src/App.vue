@@ -7,7 +7,7 @@ import AppFooter from '@/layout/AppFooter.vue'
 <template>
   <div class="common-layout">
     <header>
-      <AppHeader> </AppHeader>
+      <AppHeader />
     </header>
 
     <el-main>
@@ -15,7 +15,7 @@ import AppFooter from '@/layout/AppFooter.vue'
     </el-main>
 
     <footer>
-      <AppFooter></AppFooter>
+      <AppFooter />
     </footer>
   </div>
 </template>
