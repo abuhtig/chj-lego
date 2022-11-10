@@ -19,6 +19,11 @@ const addItem = (props: any) => {
 const setActive = (id: string) => {
   store.setActive(id)
 }
+
+const setCurrentElement = (item: object) => {
+  console.log(item)
+  store.setCurrentElement(item)
+}
 </script>
 <script lang="ts">
 import LText from '@/components/Editor/LText.vue'
@@ -52,7 +57,7 @@ export default {
       ><PropsTable
         v-if="store.getCurrentElement"
         :props="store.getCurrentElement.props as TextComponentProps"
-        @change="store.setCurrentElement"
+        @change="setCurrentElement"
       ></PropsTable
       >{{ store.getCurrentElement?.props }}</el-col
     >

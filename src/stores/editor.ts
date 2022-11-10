@@ -23,7 +23,7 @@ export const testCoponents: ComponentData[] = [
       text: 'hello',
       fontSize: '20px',
       color: 'red',
-      lineHeight: '20',
+      lineHeight: '2',
       textAlign: 'left',
       fontFamily: ''
     }
@@ -34,8 +34,8 @@ export const testCoponents: ComponentData[] = [
     props: {
       text: '范德萨发',
       fontSize: '16px',
-      color: 'yellow',
-      lineHeight: '10',
+      color: '#A85151',
+      lineHeight: '3',
       textAlign: 'left',
       fontFamily: 'KaiTi'
     }
@@ -46,6 +46,7 @@ export const testCoponents: ComponentData[] = [
     props: {
       text: 'hello3',
       actionType: 'url',
+      lineHeight: '5',
       url: '#',
       textAlign: 'left',
       fontFamily: ''
@@ -72,14 +73,13 @@ export const useEditor = defineStore('editor', {
     setActive(id: string) {
       this.currentElement = id
     },
-    setCurrentElement(key: any) {
-      console.log(key)
-      // const curr = this.components.find(
-      //   (component) => this.currentElement === component.id
-      // )
-      // if (curr) {
-      //   curr.props[key] = value
-      // }
+    setCurrentElement({ key, value }: { [key: string]: any }) {
+      const curr = this.components.find(
+        (component) => this.currentElement === component.id
+      )
+      if (curr) {
+        curr.props[key] = value
+      }
     }
   },
   getters: {
